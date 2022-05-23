@@ -1,24 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyProgectShope" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sx7-Fc-cLk">
+                                <rect key="frame" x="50" y="586" width="275" height="31"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Выбери свою дверь"/>
+                                <connections>
+                                    <segue destination="XbC-ol-ehB" kind="show" id="DL5-sW-ng6"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Epb-v5-TrX">
+                                <rect key="frame" x="50" y="40" width="275" height="506"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Epb-v5-TrX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="0k4-Un-KJ8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sx7-Fc-cLk" secondAttribute="bottom" constant="50" id="8So-gY-WRh"/>
+                            <constraint firstItem="Sx7-Fc-cLk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="E3s-6h-mUm"/>
+                            <constraint firstItem="Epb-v5-TrX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="H8i-g6-Vgc"/>
+                            <constraint firstItem="Sx7-Fc-cLk" firstAttribute="top" secondItem="Epb-v5-TrX" secondAttribute="bottom" constant="40" id="OED-rj-EwX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Epb-v5-TrX" secondAttribute="trailing" constant="50" id="RrY-xj-aL7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sx7-Fc-cLk" secondAttribute="trailing" constant="50" id="icZ-tk-ZlQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="Sx7-Fc-cLk" id="69U-eq-xWl"/>
+                        <outlet property="viewInfo" destination="Epb-v5-TrX" id="Yud-xc-USc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="34.399999999999999" y="83.208395802098963"/>
+        </scene>
+        <!--Каталог-->
+        <scene sceneID="jd2-Ae-0YM">
+            <objects>
+                <tableViewController id="xPc-rr-LN0" customClass="ListTableViewController" customModule="MyProgectShope" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Vp0-SX-vfE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="rva-jc-Q3M">
+                                <rect key="frame" x="0.0" y="44.5" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rva-jc-Q3M" id="f9X-oO-TYW">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xPc-rr-LN0" id="j3K-CC-0Mu"/>
+                            <outlet property="delegate" destination="xPc-rr-LN0" id="n0S-Tz-j2K"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Каталог" id="uAa-0s-343"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNM-l4-Dv2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-333" y="2196"/>
+        </scene>
+        <!--Start Tap Bar Controller-->
+        <scene sceneID="nSh-5Z-A2w">
+            <objects>
+                <tabBarController modalPresentationStyle="fullScreen" id="XbC-ol-ehB" customClass="StartTapBarController" customModule="MyProgectShope" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cVS-iL-bAD"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cov-Yl-riq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="wKa-sc-huW" kind="relationship" relationship="viewControllers" id="N08-JI-o3n"/>
+                        <segue destination="QyW-sD-7cY" kind="relationship" relationship="viewControllers" id="2z3-MM-FIR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nr2-45-Plj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="783"/>
+        </scene>
+        <!--Каталог-->
+        <scene sceneID="dwe-zA-yiA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wKa-sc-huW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Каталог" image="book" catalog="system" id="rFC-k6-0E5"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="XuJ-LD-2gg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xPc-rr-LN0" kind="relationship" relationship="rootViewController" id="Thm-Hq-Vbj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IBB-pM-pw9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-333" y="1498"/>
+        </scene>
+        <!--Карзина-->
+        <scene sceneID="ZML-Ep-Jao">
+            <objects>
+                <tableViewController id="PxB-VU-HDw" customClass="KarzinaTableViewController" customModule="MyProgectShope" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="BbA-Vk-5U4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="2Bk-uZ-mfH">
+                                <rect key="frame" x="0.0" y="44.5" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Bk-uZ-mfH" id="tCe-iT-gG1">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PxB-VU-HDw" id="xj4-L0-qqj"/>
+                            <outlet property="delegate" destination="PxB-VU-HDw" id="KH5-Ks-XAk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Карзина" id="pO4-xe-rnY"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y0e-fc-Iwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="525" y="2196"/>
+        </scene>
+        <!--Карзина-->
+        <scene sceneID="bcG-nb-fgo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QyW-sD-7cY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Карзина" image="cart" catalog="system" id="1Sq-3j-V1a"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="63B-gv-IUE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PxB-VU-HDw" kind="relationship" relationship="rootViewController" id="ELX-5u-DJA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qog-ER-Yag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="526" y="1498"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book" catalog="system" width="128" height="99"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
