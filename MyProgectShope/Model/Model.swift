@@ -33,4 +33,5 @@ enum Factory: String {
     case luxor = "Luxor"
     case onyx = "Оникс"
     case sodrugestvo = "Содружество"
+    case holl = "Хол"
 }
