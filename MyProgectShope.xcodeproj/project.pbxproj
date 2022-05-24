@@ -17,6 +17,8 @@
 		76C51F87283C0A20006FEF31 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C51F86283C0A1F006FEF31 /* ListTableViewController.swift */; };
 		76C51F89283C0A66006FEF31 /* KarzinaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C51F88283C0A66006FEF31 /* KarzinaTableViewController.swift */; };
 		76C51F8B283C0AC5006FEF31 /* StartTapBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C51F8A283C0AC5006FEF31 /* StartTapBarController.swift */; };
+		76C51FA7283CA03F006FEF31 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C51FA6283CA03F006FEF31 /* Model.swift */; };
+		76C51FA9283CA7C3006FEF31 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C51FA8283CA7C3006FEF31 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		76C51F86283C0A1F006FEF31 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		76C51F88283C0A66006FEF31 /* KarzinaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KarzinaTableViewController.swift; sourceTree = "<group>"; };
 		76C51F8A283C0AC5006FEF31 /* StartTapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTapBarController.swift; sourceTree = "<group>"; };
+		76C51FA6283CA03F006FEF31 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		76C51FA8283CA7C3006FEF31 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +70,9 @@
 			children = (
 				76C51F6F283C07DB006FEF31 /* AppDelegate.swift */,
 				76C51F71283C07DB006FEF31 /* SceneDelegate.swift */,
-				76C51F73283C07DB006FEF31 /* ViewController.swift */,
-				76C51F86283C0A1F006FEF31 /* ListTableViewController.swift */,
-				76C51F88283C0A66006FEF31 /* KarzinaTableViewController.swift */,
-				76C51F8A283C0AC5006FEF31 /* StartTapBarController.swift */,
+				76C51FAB283CA91F006FEF31 /* DataManager */,
+				76C51FAA283CA918006FEF31 /* Model */,
+				76C51FAC283CA952006FEF31 /* View */,
 				76C51F75283C07DB006FEF31 /* Main.storyboard */,
 				76C51F7B283C07DB006FEF31 /* Assets.xcassets */,
 				76C51F7D283C07DB006FEF31 /* LaunchScreen.storyboard */,
@@ -77,6 +80,33 @@
 				76C51F78283C07DB006FEF31 /* MyProgectShope.xcdatamodeld */,
 			);
 			path = MyProgectShope;
+			sourceTree = "<group>";
+		};
+		76C51FAA283CA918006FEF31 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				76C51FA6283CA03F006FEF31 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76C51FAB283CA91F006FEF31 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				76C51FA8283CA7C3006FEF31 /* DataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		76C51FAC283CA952006FEF31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76C51F73283C07DB006FEF31 /* ViewController.swift */,
+				76C51F8A283C0AC5006FEF31 /* StartTapBarController.swift */,
+				76C51F86283C0A1F006FEF31 /* ListTableViewController.swift */,
+				76C51F88283C0A66006FEF31 /* KarzinaTableViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +187,8 @@
 				76C51F89283C0A66006FEF31 /* KarzinaTableViewController.swift in Sources */,
 				76C51F8B283C0AC5006FEF31 /* StartTapBarController.swift in Sources */,
 				76C51F72283C07DB006FEF31 /* SceneDelegate.swift in Sources */,
+				76C51FA9283CA7C3006FEF31 /* DataManager.swift in Sources */,
+				76C51FA7283CA03F006FEF31 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
