@@ -69,6 +69,22 @@
             </objects>
             <point key="canvasLocation" x="33" y="-807"/>
         </scene>
+        <!--Главная-->
+        <scene sceneID="rDq-pl-iW3">
+            <objects>
+                <viewController id="5vf-cV-cxz" customClass="HomeViewController" customModule="MyProgectShope" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lGO-22-JVb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0gS-eG-GwF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Главная" image="house" catalog="system" id="Q1G-uc-QW4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tk5-pV-KH1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1154.4000000000001" y="1572.8635682158922"/>
+        </scene>
         <!--Выбор фабрики-->
         <scene sceneID="jd2-Ae-0YM">
             <objects>
@@ -142,16 +158,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Модель двери" id="wJu-wD-ULR">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellManuscript" id="Wkk-6P-b7t">
-                                <rect key="frame" x="0.0" y="44.5" width="375" height="43.5"/>
+                                <rect key="frame" x="0.0" y="88.5" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wkk-6P-b7t" id="Gbq-Q2-ZG5">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="fg3-7R-eDF" kind="show" id="nIn-ZA-EJS"/>
+                                    <segue destination="6gB-g5-Teg" kind="show" id="lYP-FD-pCe"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -167,46 +188,46 @@
             <point key="canvasLocation" x="-498" y="2999"/>
         </scene>
         <!--Info Door View Controller-->
-        <scene sceneID="hc9-7w-4el">
+        <scene sceneID="PUD-0k-uIK">
             <objects>
-                <viewController id="fg3-7R-eDF" customClass="InfoDoorViewController" customModule="MyProgectShope" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kRk-ym-aOl">
+                <viewController id="6gB-g5-Teg" customClass="InfoDoorViewController" customModule="MyProgectShope" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iIn-55-9hn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="OLv-rP-d35"/>
+                        <viewLayoutGuide key="safeArea" id="Q3V-Dg-TaR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KmN-3i-zGG">
-                        <nil key="title"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="ckY-Nk-5I8"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zjQ-Fw-8T0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNG-R0-Ir3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-498.39999999999998" y="3726.3868065967017"/>
+            <point key="canvasLocation" x="-500" y="3718"/>
         </scene>
-        <!--Выбор фабрики.-->
+        <!--Start Tap Bar Controller-->
         <scene sceneID="nSh-5Z-A2w">
             <objects>
                 <tabBarController modalPresentationStyle="fullScreen" id="XbC-ol-ehB" customClass="StartTapBarController" customModule="MyProgectShope" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Выбор фабрики." id="cVS-iL-bAD"/>
+                    <navigationItem key="navigationItem" id="cVS-iL-bAD"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cov-Yl-riq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="5vf-cV-cxz" kind="relationship" relationship="viewControllers" id="m3l-by-Awm"/>
                         <segue destination="xPc-rr-LN0" kind="relationship" relationship="viewControllers" id="o5I-2l-1am"/>
                         <segue destination="PxB-VU-HDw" kind="relationship" relationship="viewControllers" id="0hY-t1-7fy"/>
+                        <segue destination="P8e-6W-WPn" kind="relationship" relationship="viewControllers" id="AlS-Po-8eN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nr2-45-Plj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="33" y="725"/>
         </scene>
-        <!--Карзина-->
+        <!--Корзина-->
         <scene sceneID="ZML-Ep-Jao">
             <objects>
-                <tableViewController modalPresentationStyle="fullScreen" id="PxB-VU-HDw" customClass="KarzinaTableViewController" customModule="MyProgectShope" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="PxB-VU-HDw" customClass="KorzinaTableViewController" customModule="MyProgectShope" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="BbA-Vk-5U4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,17 +247,35 @@
                             <outlet property="delegate" destination="PxB-VU-HDw" id="KH5-Ks-XAk"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Карзина" image="cart" catalog="system" id="yOS-LB-GlN"/>
+                    <tabBarItem key="tabBarItem" title="Корзина" image="cart" catalog="system" id="yOS-LB-GlN"/>
                     <navigationItem key="navigationItem" id="pO4-xe-rnY"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0e-fc-Iwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="638" y="1573"/>
+            <point key="canvasLocation" x="207" y="1573"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="HOC-d9-Zcw">
+            <objects>
+                <viewController id="P8e-6W-WPn" customClass="PersonProfileViewController" customModule="MyProgectShope" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pf7-nQ-V7i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="IGe-qZ-LZ3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="person" catalog="system" id="7IH-5R-44h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kJJ-GA-EIf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920.79999999999995" y="1572.8635682158922"/>
         </scene>
     </scenes>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="chart.bar.doc.horizontal" catalog="system" width="115" height="128"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

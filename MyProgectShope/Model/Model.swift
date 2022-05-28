@@ -13,6 +13,7 @@ struct Door {
     let material: Material
     let nameDoor: String
     let description: String
+    let price: String
     var flag = false
     
     static func forDoors() -> [Door] {

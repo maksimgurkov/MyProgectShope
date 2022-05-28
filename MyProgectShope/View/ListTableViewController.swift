@@ -16,8 +16,13 @@ class ListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tabBarController?.navigationItem.title = "Выбор фабрики"
         categories()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.navigationItem.title = "Выбор фабрики"
     }
 
     // MARK: - Table view data source

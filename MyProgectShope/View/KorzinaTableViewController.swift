@@ -1,5 +1,5 @@
 //
-//  KarzinaTableViewController.swift
+//  KorzinaTableViewController.swift
 //  MyProgectShope
 //
 //  Created by Максим Гурков on 23.05.2022.
@@ -7,14 +7,18 @@
 
 import UIKit
 
-class KarzinaTableViewController: UITableViewController {
+class KorzinaTableViewController: UITableViewController {
     
     var doors: [Door] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.navigationItem.title = "Корзина"
     }
     
     // MARK: - Table view data source
@@ -32,6 +36,15 @@ class KarzinaTableViewController: UITableViewController {
 
         return cell
     }
+    
+    
+    // MARK: - Navigation
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    }
+    
+   
+    
     
 
     /*
@@ -69,14 +82,6 @@ class KarzinaTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+ 
 
 }

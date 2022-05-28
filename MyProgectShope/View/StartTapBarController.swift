@@ -18,8 +18,8 @@ class StartTapBarController: UITabBarController {
     
     private func transferDoors() {
         let doors = Door.forDoors()
-        let listVC = viewControllers?.first as! ListTableViewController
-        let karzinaVC = viewControllers?.last as! KarzinaTableViewController
+        let listVC = viewControllers?[1] as! ListTableViewController
+        let karzinaVC = viewControllers?[2] as! KorzinaTableViewController
         
         listVC.doors = doors
         karzinaVC.doors = doors
