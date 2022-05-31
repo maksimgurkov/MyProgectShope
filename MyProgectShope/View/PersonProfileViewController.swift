@@ -7,16 +7,32 @@
 
 import UIKit
 
-class PersonProfileViewController: UIViewController {
-
+class PersonProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    
+    @IBOutlet weak var personeImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        personeImage.layer.cornerRadius = personeImage.frame.width / 2
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.navigationItem.title = "Профиль"
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
+        var content = cell.defaultContentConfiguration()
+        content.text = "Настройки"
+        cell.contentConfiguration = content
+        return cell
     }
     
 
