@@ -218,6 +218,7 @@ class InfoDoorViewController: UIViewController {
         if !door.flag {
             door.flag.toggle()
             priceButton.setTitle("Удалить из корзины", for: .normal)
+            print("\(door.flag)")
         } else if door.flag {
             door.flag.toggle()
             priceButton.setTitle("Добавить в корзину", for: .normal)
@@ -226,6 +227,7 @@ class InfoDoorViewController: UIViewController {
     
     @objc private func activitiSteper(sender: UIStepper) {
         counts550Label.text = "\(Int(sender.value)) шт."
+        door.count550Door = Int(sender.value)
     }
     
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
-    var doors: [Door] = []
+    var doors: [Door]!
     
     private var cat: [String] = []
     private var listDoors: [Door] = []

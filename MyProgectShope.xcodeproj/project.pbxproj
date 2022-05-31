@@ -22,6 +22,7 @@
 		76C51FAE283CC3B6006FEF31 /* ListOfDoorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C51FAD283CC3B6006FEF31 /* ListOfDoorsTableViewController.swift */; };
 		76C51FB0283CF058006FEF31 /* ManuscriptDoorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C51FAF283CF058006FEF31 /* ManuscriptDoorsTableViewController.swift */; };
 		76C51FB2283CF785006FEF31 /* InfoDoorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C51FB1283CF785006FEF31 /* InfoDoorViewController.swift */; };
+		76C5A0EA2845FC9300E379CE /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C5A0E92845FC9300E379CE /* ApplicationViewController.swift */; };
 		76D6847A2842903C00C74E78 /* PersonProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D684792842903C00C74E78 /* PersonProfileViewController.swift */; };
 		76D6847C2842911A00C74E78 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D6847B2842911A00C74E78 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		76C51FAD283CC3B6006FEF31 /* ListOfDoorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfDoorsTableViewController.swift; sourceTree = "<group>"; };
 		76C51FAF283CF058006FEF31 /* ManuscriptDoorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManuscriptDoorsTableViewController.swift; sourceTree = "<group>"; };
 		76C51FB1283CF785006FEF31 /* InfoDoorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDoorViewController.swift; sourceTree = "<group>"; };
+		76C5A0E92845FC9300E379CE /* ApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
 		76D684792842903C00C74E78 /* PersonProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonProfileViewController.swift; sourceTree = "<group>"; };
 		76D6847B2842911A00C74E78 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,13 +115,14 @@
 			children = (
 				76C51F73283C07DB006FEF31 /* ViewController.swift */,
 				76C51F8A283C0AC5006FEF31 /* StartTapBarController.swift */,
+				76D6847B2842911A00C74E78 /* HomeViewController.swift */,
 				76C51F86283C0A1F006FEF31 /* ListTableViewController.swift */,
 				76C51FAD283CC3B6006FEF31 /* ListOfDoorsTableViewController.swift */,
 				76C51FAF283CF058006FEF31 /* ManuscriptDoorsTableViewController.swift */,
 				76C51FB1283CF785006FEF31 /* InfoDoorViewController.swift */,
 				76C51F88283C0A66006FEF31 /* KorzinaTableViewController.swift */,
 				76D684792842903C00C74E78 /* PersonProfileViewController.swift */,
-				76D6847B2842911A00C74E78 /* HomeViewController.swift */,
+				76C5A0E92845FC9300E379CE /* ApplicationViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				76C51FA9283CA7C3006FEF31 /* DataManager.swift in Sources */,
 				76C51FA7283CA03F006FEF31 /* Model.swift in Sources */,
 				76D6847A2842903C00C74E78 /* PersonProfileViewController.swift in Sources */,
+				76C5A0EA2845FC9300E379CE /* ApplicationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

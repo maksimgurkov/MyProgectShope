@@ -27,10 +27,27 @@ class HomeViewController: UIViewController {
     private lazy var imageSeles: UIImageView = {
         let imageSeles = UIImageView()
         imageSeles.image = UIImage(named: "Акция")
-        imageSeles.layer.cornerRadius = 20
         imageSeles.contentMode = .scaleToFill
         imageSeles.translatesAutoresizingMaskIntoConstraints = false
         return imageSeles
+    }()
+    
+    private lazy var specialistImage: UIImageView = {
+        let specialistImage = UIImageView()
+        specialistImage.translatesAutoresizingMaskIntoConstraints = false
+        specialistImage.image = UIImage(named: "Замер")
+        specialistImage.contentMode = .scaleToFill
+        return specialistImage
+    }()
+    
+    private lazy var specialistButton: UIButton = {
+        let specialistButton = UIButton()
+        specialistButton.translatesAutoresizingMaskIntoConstraints = false
+        specialistButton.setTitle("Оставить заявку", for: .normal)
+        specialistButton.layer.cornerRadius = 10
+        specialistButton.backgroundColor = .blue
+        specialistButton.addTarget(self, action: #selector(activSpecialist), for: .touchUpInside)
+        return specialistButton
     }()
     
     private var contentSize: CGSize {
@@ -42,6 +59,8 @@ class HomeViewController: UIViewController {
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubview(imageSeles)
+        contentView.addSubview(specialistImage)
+        contentView.addSubview(specialistButton)
         
         setupViewConstrain()
     }
@@ -49,6 +68,12 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.navigationItem.title = "Главная"
+    }
+    
+    @objc func activSpecialist() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newVC = storyBoard.instantiateViewController(withIdentifier: "vc") as! ApplicationViewController
+        self.present(newVC, animated: true)
     }
     
 
@@ -72,7 +97,16 @@ extension HomeViewController {
             imageSeles.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 20),
             imageSeles.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
             imageSeles.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -20),
-            imageSeles.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -1050)
+            imageSeles.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -1050),
+            
+            specialistImage.topAnchor.constraint(equalTo: imageSeles.bottomAnchor, constant: 20),
+            specialistImage.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 20),
+            specialistImage.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -20),
+            specialistImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -850),
+            
+            specialistButton.topAnchor.constraint(equalTo: specialistImage.bottomAnchor, constant: 0),
+            specialistButton.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 20),
+            specialistButton.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -20)
             
         ])
         

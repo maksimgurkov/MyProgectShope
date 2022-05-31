@@ -9,7 +9,7 @@ import UIKit
 
 class ListOfDoorsTableViewController: UITableViewController {
     
-    var doorsList: [Door] = []
+    var doorsList: [Door]!
     private var doorMaterial: [String] = []
     private var manuscriptDoor: [Door] = []
 

@@ -9,7 +9,7 @@ import UIKit
 
 class ManuscriptDoorsTableViewController: UITableViewController {
     
-    var doors: [Door] = []
+    var doors: [Door]!
 
     override func viewDidLoad() {
         super.viewDidLoad()

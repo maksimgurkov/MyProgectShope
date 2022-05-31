@@ -8,17 +8,26 @@
 import Foundation
 
 
-struct Door {
+class Door {
     let factory: Factory
     let material: Material
     let nameDoor: String
     let description: String
     let price: String
     var flag = false
+    var count550Door = 0
     
     static func forDoors() -> [Door] {
         let door = DataManager.shared.doors
         return door
+    }
+    
+    init(factory: Factory, material: Material, nameDoor: String, description: String, price: String) {
+        self.factory = factory
+        self.material = material
+        self.nameDoor = nameDoor
+        self.description = description
+        self.price = price
     }
     
     

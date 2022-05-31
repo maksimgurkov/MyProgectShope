@@ -69,6 +69,21 @@
             </objects>
             <point key="canvasLocation" x="33" y="-807"/>
         </scene>
+        <!--Application View Controller-->
+        <scene sceneID="VwU-kI-L2G">
+            <objects>
+                <viewController storyboardIdentifier="vc" id="OTn-0t-Y7R" customClass="ApplicationViewController" customModule="MyProgectShope" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0nX-TD-pcP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2Zg-L3-iNY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gAx-2m-S1w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1878" y="1573"/>
+        </scene>
         <!--Главная-->
         <scene sceneID="rDq-pl-iW3">
             <objects>
