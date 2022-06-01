@@ -10,12 +10,13 @@ import UIKit
 class PersonProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    
+    @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var personeImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         personeImage.layer.cornerRadius = personeImage.frame.width / 2
+        registerButton.layer.cornerRadius = 8
     }
     
     override func viewWillAppear(_ animated: Bool) {
